@@ -1,0 +1,654 @@
+{
+  "info": {
+    "_postman_id": "2c69c08d-9c2b-4a19-aa60-dc5a2fedc4a7",
+    "name": "Sparkcart",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48065061",
+    "_collection_link": "https://go.postman.co/collection/48065061-2c69c08d-9c2b-4a19-aa60-dc5a2fedc4a7?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "products",
+      "item": [
+        {
+          "name": "get all products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Domain}}/api/v1/products",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create new product",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "  {\r\n            \"_id\": \"694a7d3e599ae0aa3b4db108\",\r\n            \"name\": \"Golden Pearl Bracelet\",\r\n            \"price\": 1999,\r\n            \"description\": \"Beautiful handmade golden pearl bracelet for women\",\r\n            \"rating\": 4.5,\r\n            \"images\": [\r\n                {\r\n                    \"public_id\": \"sample_image_1\",\r\n                    \"url\": \"https://example.com/image1.jpg\",\r\n                    \"_id\": \"694a7d3e599ae0aa3b4db109\"\r\n                }\r\n            ],\r\n            \"category\": \"bracelets\",\r\n            \"seller\": \"Jewelry Store\",\r\n            \"stock\": 25,\r\n            \"numOfReviews\": 1,\r\n            \"reviews\": [\r\n                {\r\n                    \"user\": \"64b8f9e2a1234567890abcd1\",\r\n                    \"rating\": 5,\r\n                    \"Comment\": \"Amazing quality and fast delivery!\",\r\n                    \"_id\": \"694a7d3e599ae0aa3b4db10a\"\r\n                }\r\n            ],\r\n            \"user\": \"64b8f9e2a1234567890abcd1\",\r\n            \"createdAt\": \"2025-12-23T11:30:06.686Z\",\r\n            \"updatedAt\": \"2025-12-23T15:29:00.747Z\",\r\n            \"__v\": 0\r\n        }\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Domain}}/api/v1/admin/products",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get single product",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Domain}}/api/v1/product/694aaddb3d98f09bb0ef769",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "product",
+                "694aaddb3d98f09bb0ef769"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update product",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": " { \"price\": 1999}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Domain}}/api/v1/product/694a7d3e599ae0aa3b4db108",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "product",
+                "694a7d3e599ae0aa3b4db108"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Product",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{Domain}}/api/v1/product/694a7d3e599ae0aa3b4db108",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "product",
+                "694a7d3e599ae0aa3b4db108"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "auth",
+      "item": [
+        {
+          "name": "login",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"palwasha@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Domain}}/api/v1/login",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "register",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"arham\",\r\n    \"email\": \"arham@gmail.com\",\r\n    \"password\":\"123123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Domain}}/api/v1/register",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "log out",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Domain}}/api/v1/logout",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "user",
+      "item": [
+        {
+          "name": "update password",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"oldPassword\":\"123123\",\r\n    \"password\":\"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Domain}}/api/v1/password/update",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "password",
+                "update"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get profile",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Domain}}/api/v1/me",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "me"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get user details",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Domain}}/api/v1/admin/users/",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "users",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all users",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Domain}}/api/v1/admin/users/",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "users",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update user-Admin",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"pari\",\r\n    \"email\": \"pari22@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Domain}}/api/v1/admin/users/694c2709c8e9d1ecbd42b72f",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "users",
+                "694c2709c8e9d1ecbd42b72f"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete user -Admin",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{Domain}}/api/v1/admin/users/694c2709c8e9d1ecbd42b72f",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "users",
+                "694c2709c8e9d1ecbd42b72f"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "orders",
+      "item": [
+        {
+          "name": "new order",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"shippingInfo\": {\r\n    \"address\": \"Street 12, Block A\",\r\n    \"city\": \"Lahore\",\r\n    \"phoneNo\": \"03011234567\",\r\n    \"zipCode\": \"54000\",\r\n    \"country\": \"Pakistan\"\r\n  },\r\n  \"user\": \"66b9f1a8c9b2a12f34567890\",\r\n  \"orderItems\": [\r\n    {\r\n      \"name\": \"Wireless Mouse\",\r\n      \"quantity\": 2,\r\n      \"images\": \"https://example.com/mouse.jpg\",\r\n      \"price\": 1500,\r\n      \"product\": \"66b9f2c1d4e8a23f12345678\"\r\n    },\r\n    {\r\n      \"name\": \"Mechanical Keyboard\",\r\n      \"quantity\": 1,\r\n      \"images\": \"https://example.com/keyboard.jpg\",\r\n      \"price\": 8500,\r\n      \"product\": \"66b9f2d9a9b8c11f98765432\"\r\n    }\r\n  ],\r\n  \"paymentMethod\": \"COD\",\r\n  \"paymentInfo\": {\r\n    \"id\": \"COD123456\",\r\n    \"status\": \"Pending\"\r\n  },\r\n  \"itemsPrice\": 11500,\r\n  \"taxAmount\": 500,\r\n  \"ShippingAmount\": 300,\r\n  \"totalAmount\": 12300,\r\n  \"orderStatus\": \"Processing\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Domain}}/api/v1/neworder",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "neworder"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get alll orders",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Domain}}/api/v1/me/orders",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "me",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "single order details",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Domain}}/api/v1/orders/694cb312922223cef6e520d3",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "orders",
+                "694cb312922223cef6e520d3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all orders - Admin",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Domain}}/api/v1/admin/orders",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update order - Admin",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\":\"Shipped\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Domain}}/api/v1/admin/orders/694cb4f4e2f0cf7cf6ea0706",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "orders",
+                "694cb4f4e2f0cf7cf6ea0706"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delte order admin",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{Domain}}/api/v1/admin/orders/694cb4f4e2f0cf7cf6ea0706",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "orders",
+                "694cb4f4e2f0cf7cf6ea0706"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "review",
+      "item": [
+        {
+          "name": "give review ",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"rating\":\"5\",\r\n    \"comment\":\"nice\",\r\n    \"productId\":\"694b62532b803f921829a4ae\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Domain}}/api/v1/reviews",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "reviews"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get product review",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Domain}}/api/v1/reviews?id=694b62532b803f921829a4ae",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "reviews"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "694b62532b803f921829a4ae"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete review",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{Domain}}/api/v1/admin/reviews?productId=694b62532b803f921829a4ae&id=694d714f522441570b74d635",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "reviews"
+              ],
+              "query": [
+                {
+                  "key": "productId",
+                  "value": "694b62532b803f921829a4ae"
+                },
+                {
+                  "key": "id",
+                  "value": "694d714f522441570b74d635"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

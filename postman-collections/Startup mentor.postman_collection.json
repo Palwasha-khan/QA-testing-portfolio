@@ -1,0 +1,484 @@
+{
+  "info": {
+    "_postman_id": "f305f6eb-ea61-4261-9ee3-e21cd9be79e0",
+    "name": "Startup mentor",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48065061",
+    "_collection_link": "https://go.postman.co/collection/48065061-f305f6eb-ea61-4261-9ee3-e21cd9be79e0?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Ideas",
+      "item": [
+        {
+          "name": "get all ideas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Domain}}/api/v1/idea/all",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "idea",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "new idea",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"EcoSphere AI - Sustainable AgTech\",\r\n  \"description\": \"An AI-powered precision farming platform designed to optimize crop yields, monitor soil health in real-time, and significantly reduce water wastage using local IoT sensor arrays.\",\r\n  \"locationName\": \"Islamabad, Pakistan\",\r\n  \"lat\": 33.6844,\r\n  \"lng\": 73.0479,\r\n  \"category\": \"Healthcare\",\r\n  \"fundingAmount\": 25000,\r\n  \"teamSize\": 4,\r\n  \"avgTeamExperience\": 2.5,\r\n  \"mentorshipSupport\": 1,\r\n  \"incubationSupport\": 1,\r\n  \"marketReadinessLevel\": 3,\r\n  \"marketReadinessItems\": [\r\n    \"Functional MVP\",\r\n    \"Initial Hardware Prototype Tested\",\r\n    \"Core Machine Learning Model Trained\",\r\n    \"User Dashboard Layout Finalized\"\r\n  ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Domain}}/api/v1/idea/new",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "idea",
+                "new"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete idea",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{Domain}}/api/v1/idea/delete/6a1be1eb4648e5794634434d",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "idea",
+                "delete",
+                "6a1be1eb4648e5794634434d"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Prediction",
+      "item": [
+        {
+          "name": "all predictions",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Domain}}/api/v1/predictions",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "predictions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "prediction ",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Domain}}/api/v1/ideas/6a1be2ec4648e57946344355/prediction",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "ideas",
+                "6a1be2ec4648e57946344355",
+                "prediction"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Feedback",
+      "item": [
+        {
+          "name": "submit feedback",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Rida\",\r\n    \"email\": \"test@example.com\",\r\n    \"title\":\"Website\",\r\n    \"message\": \"Great rwebsite\",\r\n    \"rating\": 5\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Domain}}/api/v1/feedback/submit",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "feedback",
+                "submit"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "all feedbacks",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Domain}}/api/v1/feedback/all",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "feedback",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \r\n    \"name\": \"Fatima Noor\",\r\n    \"email\": \"fatima@example.com\",\r\n    \"password\": \"Fatima123!\"  \r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Domain}}/api/v1/register",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get profile",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "",
+                "value": " ",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{Domain}}/api/v1/me",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "me"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{  \r\n    \"email\": \"palwasha@gmail.com\",\r\n    \"password\": \"121212\"  \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Domain}}/api/v1/login",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update profile",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTY2ZTI2MWZkNzc5YjJkYzgwZGE3YyIsImlhdCI6MTc3MTQ2NjQ5MiwiZXhwIjoxNzcyMDcxMjkyfQ.yrfGm6NnYc6Kv3Cl4CyAjt04M6S4xYWYaPzcloI2HhY",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"palwashaaa\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Domain}}/api/v1/me/update",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "me",
+                "update"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "log out",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Domain}}/api/v1/logout",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "forgot password",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTY2ZTI2MWZkNzc5YjJkYzgwZGE3YyIsImlhdCI6MTc3MTQ2NjQ5MiwiZXhwIjoxNzcyMDcxMjkyfQ.yrfGm6NnYc6Kv3Cl4CyAjt04M6S4xYWYaPzcloI2HhY",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \r\n  \"email\": \"palwasha@gmail.com\" \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Domain}}/api/v1/password/forgot",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "password",
+                "forgot"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reset password",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTY2ZTI2MWZkNzc5YjJkYzgwZGE3YyIsImlhdCI6MTc3MTQ2NjQ5MiwiZXhwIjoxNzcyMDcxMjkyfQ.yrfGm6NnYc6Kv3Cl4CyAjt04M6S4xYWYaPzcloI2HhY",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \r\n  \"oldPassword\":\"1234567\",\r\n  \"Password\": \"123456\" \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Domain}}/api/password/update",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "password",
+                "update"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Contact Us",
+      "item": [
+        {
+          "name": "submit",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Palwasha\",\r\n    \"email\": \"test@example.com\",\r\n    \"subject\": \"Help Needed\",\r\n    \"message\": \"I have a question about your predictions.\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Domain}}/api/v1/contact/submit",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "contact",
+                "submit"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "all request",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Domain}}/api/v1/contact/all",
+              "host": [
+                "{{Domain}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "contact",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
